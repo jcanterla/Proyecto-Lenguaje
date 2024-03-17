@@ -19,9 +19,10 @@
 }
 
 body {
-    background: #E0FFFF;  /* fallback for old browsers, light cyan */
-    background: -webkit-linear-gradient(to right, #E0FFFF, #98FB98);  /* Chrome 10-25, Safari 5.1-6, light cyan to pale green */
-    background: linear-gradient(to right, #E0FFFF, #c8e8c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+, light cyan to pale green */
+    background: #E0FFFF;
+    background: -webkit-linear-gradient(to right, #E0FFFF, #98FB98);
+    background: linear-gradient(to right, #E0FFFF, #c8e8c8);
+    padding-bottom: 30px;
 }
 
 h1 {
@@ -37,9 +38,9 @@ main {
 
     color: white;
 
-    background: #000046;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #000046;
+    background: -webkit-linear-gradient(to left, #1CB5E0, #000046);
+    background: linear-gradient(to left, #1CB5E0, #000046);
     border-radius: 20px;
     box-shadow: 5px 5px 2px 2px rgb(77, 0, 77);
 

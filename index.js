@@ -69,3 +69,51 @@ app.get('/rss', (req, res) => {
     });
 });
 
+// Leer el archivo JSON
+const data = require('./public/Noticias.json');
+
+// Tomar las últimas 5 noticias
+const lastFive = data.slice(-5);
+
+// Invertir el orden del array
+lastFive.reverse();
+
+// Para cada noticia, crear un archivo HTML
+lastFive.forEach((news, index) => {
+    const html = `
+        <!DOCTYPE html>
+        <html lang="es">
+            <head>
+                <meta charset="UTF-8">
+                <title>${news.titulo}</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            </head>
+            <body>
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h5 class="text-white h4">Collapsed content</h5>
+                        <span class="text-muted">Toggleable via the navbar brand.</span>
+                    </div>
+                </div>
+                <nav class="navbar navbar-dark bg-dark">
+                    <div class="container-fluid text-start">
+                        <a class="navbar-nav nav-link active text-white" aria-current="page" href="index.html">NOTICIAS</a>
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h3 class="card-title">${news.titulo}</h3>
+                            <h5 class="card-subtitle mb-2 text-muted">${news.autor}</h5>
+                            <p class="card-text">${news.descripcion}</p>
+                            <p class="card-text"><small class="text-muted">${news.fecha}</small></p>
+                            <a href="${news.enlace}" class="card-link">Leer más</a>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </html>
+    `;
+
+    fs.writeFileSync(path.join(__dirname, 'HTMLS', `newsDetail${index}.html`), html);
+});
