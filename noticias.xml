@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+            <rss version="2.0">
+                <channel>
+                    <title>Noticias E4</title>
+                    <link>https://aleorfu-safa.github.io/E4-LMSGI/</link>
+                    <description>Sindicación de noticias elaboradas por E4</description>
+                    <item>
+                        <title>Noticia 5</title>
+                        <link>https://aleorfu-safa.github.io/E4-LMSGI/noticia1.html</link>
+                        <description>Descripción de la noticia 5</description>
+                        <author>Juan Manolo</author>
+                        <pubDate>09/03/23</pubDate>
+                        <category>España</category>
+                        <enclosure url="https://4.bp.blogspot.com/-WWQhQ-5nabE/VG5RaqVx2VI/AAAAAAACY8w/xulItLmvqWo/s1600/paisajes%2Bnaturales%2Bnuevas%2Bfotos%2Blagos%2Bmonta%C3%B1as%2Bflores%2By%2Bbosques%2B(5).jpg" length="90000" type="image/jpg"/>
+                    </item>
+                    <item>
+                        <title>Noticia 4</title>
+                        <link>https://aleorfu-safa.github.io/E4-LMSGI/noticia2.html</link>
+                        <description>Descripción noticia 4</description>
+                        <author>Carlos Ruiz</author>
+                        <pubDate>09/03/23</pubDate>
+                        <category>Tecnología </category>
+                        <enclosure url="https://www.xtrafondos.com/wallpapers/montanas-en-bosque-durante-el-otono-6501.jpg" length="90000" type="image/jpg"/>
+                    </item>
+                    <item>
+                        <title>Noticia 3</title>
+                        <link>https://aleorfu-safa.github.io/E4-LMSGI/noticia3.html</link>
+                        <description>Descripción notica 3</description>
+                        <author>Victor Vilches</author>
+                        <pubDate>09/03/23</pubDate>
+                        <category>Actualidad</category>
+                        <enclosure url="https://1.bp.blogspot.com/-Igq-p1e9oXU/VDWKE-ecgcI/AAAAAAACVD0/a5VbRxxPG9I/s1600/paisajes%2Bnaturales%2Bfotos%2Bnuevas%2B(6).jpg" length="90000" type="image/jpg"/>
+                    </item>
+                    <item>
+                        <title>Noticia 2</title>
+                        <link>https://aleorfu-safa.github.io/E4-LMSGI/noticia4.html</link>
+                        <description>Descripción Noticia 2</description>
+                        <author>Alejandro Ortiz</author>
+                        <pubDate>09/03/23</pubDate>
+                        <category>Anime y Manga</category>
+                        <enclosure url="https://1.bp.blogspot.com/-JCw0pdyp_7w/VAc1kOrvoFI/AAAAAAACTXY/FvawFkSX_Gs/s1600/paisajes%2Bnaturales%2B-%2Bnaturaleza%2B-%2Bnatural%2Bfree%2Blandscapes%2B-%2Bfotos%2Bde%2Bpaisajes%2B(4).jpg" length="90000" type="image/jpg"/>
+                    </item>
+                    <item>
+                        <title>Noticia 1</title>
+                        <link>https://aleorfu-safa.github.io/E4-LMSGI/noticia5.html</link>
+                        <description>Descripción noticia 1</description>
+                        <author>Pedro Real</author>
+                        <pubDate>09/03/23</pubDate>
+                        <category>Comedia</category>
+                        <enclosure url="https://i.pinimg.com/originals/e8/a0/cc/e8a0cc95917c1a8d2dde6a388ed7da43.jpg" length="90000" type="image/jpg"/>
+                    </item></channel>
+            </rss>
