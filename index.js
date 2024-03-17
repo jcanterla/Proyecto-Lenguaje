@@ -56,18 +56,25 @@ app.get('/rss', (req, res) => {
     fs.readFile(json, 'utf-8', (err, data) => {
         if (err) throw err;
         let noticias = JSON.parse(data);
-        noticias.forEach((noticia) => {
-            feed.item({
-                title: noticia.titulo,
-                description: noticia.descripcion,
-                url: noticia.enlace,
-                date: noticia.fecha
-            });
+        noticias.reverse();
+        let numero = 0;
+        noticias.forEach((noticia, index) => {
+            if(numero < 5){
+                feed.item({
+                    title: noticia.titulo,
+                    description: noticia.descripcion,
+                    categoria: noticia.categoria,
+                    url: `http://localhost:3000/HTMLS/newsDetail${index}.html`,
+                    date: noticia.fecha
+                });
+                numero++;
+            }
         });
         res.set('Content-Type', 'text/xml');
         res.send(feed.xml());
     });
 });
+app.use('/HTMLS', express.static(path.join(__dirname, 'HTMLS')));
 
 // Leer el archivo JSON
 const data = require('./public/Noticias.json');
@@ -105,6 +112,7 @@ lastFive.forEach((news, index) => {
                         <div class="card-body">
                             <h3 class="card-title">${news.titulo}</h3>
                             <h5 class="card-subtitle mb-2 text-muted">${news.autor}</h5>
+                            <p class="card-text">${news.categoria}</p>
                             <p class="card-text">${news.descripcion}</p>
                             <p class="card-text"><small class="text-muted">${news.fecha}</small></p>
                             <a href="${news.enlace}" class="card-link">Leer más</a>
