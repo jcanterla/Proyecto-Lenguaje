@@ -15,48 +15,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--CSS-->
-    <link href="general.css" rel="stylesheet">
+    <link href="css/general.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
         .container {
             max-width: 800px;
         }
-        label {
-            color: green;
-        }
     </style>
 
     <!--Scripts-->
-    <script>
-        fetch('http://localhost:3000/noticias.json')
-            .then(response => response.json())
-            .then(data =>  {
-                console.log(data);
-        })
-    </script>
+    <script src="js/formulario.js" defer></script>
 </head>
 
 <!--Parte visible-->
 <body>
     <h1 class="text-center mt-5">Formulario de Noticias</h1>
     <div class="container">
-        <form id="newsForm" action="http://localhost:3000/recibe" method="post">
+        <form id="newsForm">
             <div class="mb-3">
-                <label for="titulo" class="form-label">Título de la Noticia</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" required>
+                <label for="newsTitle" class="form-label">Título de la Noticia</label>
+                <input type="text" class="form-control" id="newsTitle" required>
             </div>
             <div class="mb-3">
-                <label for="autor" class="form-label">Autor de la Noticia</label>
-                <input type="text" class="form-control" id="autor" name="autor" required>
+                <label for="newsAuthor" class="form-label">Autor de la Noticia</label>
+                <input type="text" class="form-control" id="newsAuthor" required>
             </div>
             <div class="mb-3">
-                <label for="fecha" class="form-label">Fecha de la Noticia</label>
-                <input type="date" class="form-control" id="fecha" name="fecha" required>
+                <label for="newsDate" class="form-label">Fecha de la Noticia</label>
+                <input type="date" class="form-control" id="newsDate" required>
             </div>
             <div class="mb-3">
-                <label for="categoria" class="form-label">Categoría de la Noticia</label>
-                <select class="form-select" id="categoria" name="categoria" required>
+                <label for="newsCategory" class="form-label">Categoría de la Noticia</label>
+                <select class="form-select" id="newsCategory" required>
                     <option selected>Elige...</option>
                     <option value="1">Categoría 1</option>
                     <option value="2">Categoría 2</option>
@@ -64,17 +55,17 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="descripcion" class="form-label">Contenido de la Noticia</label>
-                <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
+                <label for="newsContent" class="form-label">Contenido de la Noticia</label>
+                <textarea class="form-control" id="newsContent" rows="3" required></textarea>
             </div>
             <div class="mb-3">
-                <label for="enlace" class="form-label">Link de la Noticia</label>
-                <input type="url" class="form-control" id="enlace" name="enlace">
+                <label for="newsImage" class="form-label">Imagen de la Noticia</label>
+                <input type="file" class="form-control" id="newsImage">
             </div>
 
             <div id="botones">
                 <!--Botón "Publicar-->
-                <button id="guardar" type="submit" class="btn btn-danger">Publicar</button>
+                <button id="guardar" type="submit" class="btn btn-dark">Publicar</button>
                 <!--Botón vaciar noticias-->
                 <button id="vaciar" class="btn btn-danger">Vaciar Noticias</button>
             </div>
